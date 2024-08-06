@@ -1,0 +1,115 @@
+< IDOCTYPE html>
+
+‹html >
+
+< head >
+
+‹ title>Student Form‹/title>
+
+‹ script>
+
+function validateForm () {
+
+let studentName
+
+= document.getElementById ("studentName").value;
+
+let studentAddress = document.getElementById ("studentAddress"). value;
+
+let optionalCourse = document querySelector ('input[name="optionalCourse"]: checked');
+
+let interests = document.querySelectorAll( 'input [name="interest"]: checked*);
+
+if (studentName === ") {
+
+alert ("Student Name must be filled out"); return false;
+
+(studentAddress F==="'") {
+
+alert ("Student Address must be filled out"); return false;
+
+}
+
+if
+
+(optionalCourse === null) {
+
+alert("Please choose an optional course");
+
+return false;
+
+}
+
+if (interests length === 0) {
+
+alert("Please choose at least one interest");
+
+return false;
+
+}
+
+return true;
+
+‹/script >
+
+‹/head>
+
+< body>
+
+<h2>Student Form</h2>
+
+‹ form name="studentForm" onsubmit="return validateForm()" method="post" action="submit_form.php"›
+
+‹ label ›
+
+for="studentName">Student Name: </label><br>
+
+‹input type="text" id="studentName" ><br><br›
+
+‹label for="studentAddress">Student Address:</label›<br›
+
+‹input type="text" id="studentAddress"><br><br>
+
+< label for="programmeCode"›Programme Code: </label>
+
+< select id="programmeCode">
+
+‹option>BCA‹/option>
+
+‹option>MCA‹/option>
+
+</ select><br>‹br›
+
+< label›Optional Courses (Choose
+
+any one):</label><br>
+
+DBMS
+
+<input type="radio" name="optionalCourse"›
+
+OOPS
+
+‹input type="radio" name="optionalCourse"> <br><br›
+
+< label›Your Interests (Choose at least one):</label>‹br›
+
+Programming < input type="checkbox" name="interest"›
+
+‹br>
+
+Database
+
+< input type="checkbox" name="interest"›
+
+Theory of Computer<input type="checkbox" name="interest"›
+
+‹br><br>
+
+‹input type="submit" value="SUBMIT">
+
+</form>
+
+</body>
+
+</html>
